@@ -254,6 +254,20 @@
     <div class="innerWrap s3">
       <h2>흡연은 심혈관질환을 유발한다.</h2>
       <p>흡연은 심혈관질환으로 사망할 확률을 4배나<br> 증가시키며, 동맥경화, 뇌졸중, 복부 대동맥류 등<br> 심혈관질환의 원인이 된다.</p>
+    <script>
+      let bar;
+      window.onload = () => {
+        bar = document.querySelector(".bar");
+      };
+      window.addEventListener("scroll", () => {
+        let scrollHeight = document.documentElement.scrollHeight;
+        let innerHeight = window.innerHeight;
+        let scrollTop = document.documentElement.scrollTop;
+        let scroll = (scrollTop / (scrollHeight - innerHeight)) * 100;
+
+        bar.style.height = `${scroll * (232 / 325)}%`;
+      });
+    </script>
     </div>
     <img src="images/person3.png" class="image" alt="">
   </section>
